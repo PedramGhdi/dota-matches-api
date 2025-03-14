@@ -4,7 +4,12 @@ import { defineConfig } from "tsup"
 
 config()
 
-const gitSha = execSync("git rev-parse --short HEAD").toString().trim()
+let gitSha = "unknown" // Default value if Git command fails
+try {
+  gitSha = execSync("git rev-parse --short HEAD").toString().trim()
+} catch (error) {
+  console.warn("Warning: Unable to retrieve Git SHA. Using default value.")
+}
 
 export default defineConfig({
   entry: ["src/index.ts"],
