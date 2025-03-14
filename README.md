@@ -10,7 +10,7 @@ by amazing people.
 
 ## API
 
-**Base URL:** `https://dota.haglund.dev`
+**Base URL:** `https://dota-matches-api-production.up.railway.app/`
 
 ```ts
 type Team = {
