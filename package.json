@@ -21,7 +21,7 @@
     "dev": "wrangler dev -j",
     "dev:migrate": "wrangler d1 migrations apply --local dpc",
     "build": "tsup src/index.ts --out-dir public",
-    "start": "node dist/index.js",
+    "start": "wrangler dev -j",
     "lint": "eslint src",
     "test": "vitest --mode test",
     "test:e2e": "vitest --mode test --config vitest.e2e.config.ts",
