@@ -19,7 +19,7 @@
     {
       "custom_domain": true,
       "zone_name": "dota-matches-api-production.up.railway.app",
-      "pattern": "https://dota-matches-api-production.up.railway.app"
+      "pattern": "dota-matches-api-production.up.railway.app"
     }
   ],
   "vars": {
