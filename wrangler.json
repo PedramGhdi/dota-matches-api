@@ -41,5 +41,11 @@
       "database_name": "dpc",
       "database_id": "3a25ab79-a4f0-46b6-840d-ca83decfd659"
     }
-  ]
+  ],
+  "miniflare": {
+    "kv_persist": true,
+    "r2_persist": true,
+    "d1_persist": true,
+    "cache_persist": false
+  }
 }
