@@ -18,10 +18,10 @@
     ]
   },
   "scripts": {
-    "dev": "wrangler dev -j",
+    "dev": "wrangler dev",
     "dev:migrate": "wrangler d1 migrations apply --local dpc",
     "build": "tsup src/index.ts --out-dir public",
-    "start": "wrangler dev -j",
+    "start": "wrangler dev",
     "lint": "eslint src",
     "test": "vitest --mode test",
     "test:e2e": "vitest --mode test --config vitest.e2e.config.ts",
