@@ -1,4 +1,5 @@
-FROM ubuntu:22.04
+# Use a Node.js base image
+FROM node:22
 
 # Install required packages
 RUN apt-get update && apt-get install -y \
@@ -11,20 +12,18 @@ RUN apt-get update && apt-get install -y \
 # Install pnpm
 RUN npm install -g pnpm
 
-# Set working directory
+# Set up working directory
 WORKDIR /app
 
-# Copy package files
-COPY package.json pnpm-lock.yaml* ./
-
-# Install dependencies
+# Copy package.json and install dependencies
+COPY package.json ./
 RUN pnpm install
 
-# Copy project files
+# Copy all the other files
 COPY . .
 
-# Build the project
-RUN pnpm build
+# Expose port (assuming your app runs on port 3000)
+EXPOSE 3000
 
 # Start the application
-CMD ["node", "dist/index.js"]
+CMD ["npm", "start"]
