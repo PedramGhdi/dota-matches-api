@@ -5,6 +5,7 @@ config()
 
 export default defineConfig({
   entry: ["src/index.ts"],
+  outDir: "dist",
 
   define: {
     "import.meta.env.MODE": JSON.stringify(
