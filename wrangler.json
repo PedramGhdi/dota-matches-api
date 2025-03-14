@@ -21,8 +21,8 @@
   "routes": [
     {
       "custom_domain": true,
-      "zone_name": "haglund.dev",
-      "pattern": "https://dota-matches-api-production.up.railway.app/"
+      "zone_name": "dota-matches-api-production.up.railway.app",
+      "pattern": "/*"
     }
   ],
   "vars": {
